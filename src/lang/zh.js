@@ -62,7 +62,11 @@ export default {
     theme: '换肤',
     clipboardDemo: 'Clipboard',
     i18n: '国际化',
-    externalLink: '外链'
+    externalLink: '外链',
+    // 新增
+    goodsTable: '商品列表',
+    goodsEdit:'商品编辑',
+    goodsAdd:'创建商品'
   },
   navbar: {
     logOut: '退出登录',
@@ -117,17 +121,28 @@ export default {
     export: '导出',
     reviewer: '审核人',
     id: '序号',
-    date: '时间',
     author: '作者',
     readings: '阅读数',
     status: '状态',
     actions: '操作',
     edit: '编辑',
-    publish: '发布',
-    draft: '草稿',
+    publish: '上架',
+    draft: '下架',
+    date: '时间',
     delete: '删除',
     cancel: '取 消',
     confirm: '确 定'
+  },
+  goods: {
+    title: '商品名',
+    type: '分类',
+    sort: '排序',
+    sku: '条形码',
+    prop: '属性',
+    price: '价格',
+    stock: '库存',
+    status: '状态',
+    date: '时间'
   },
   errorLog: {
     tips: '请点击右上角bug小图标',

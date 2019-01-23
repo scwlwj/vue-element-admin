@@ -50,11 +50,11 @@ module.exports = {
       'after': true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': [2, 2, {
+    'indent': [0, 0, {
       'SwitchCase': 1
     }],
     'jsx-quotes': [2, 'prefer-single'],
-    'key-spacing': [2, {
+    'key-spacing': [0, {// 对象字面量中冒号的前后空格
       'beforeColon': false,
       'afterColon': true
     }],
@@ -101,11 +101,11 @@ module.exports = {
       'allowSwitch': false
     }],
     'no-lone-blocks': 2,
-    'no-mixed-spaces-and-tabs': 2,
-    'no-multi-spaces': 2,
+    'no-mixed-spaces-and-tabs': 0,//不允许混用tab和空格
+    'no-multi-spaces': 0,// 不能用多余的空格
     'no-multi-str': 2,
-    'no-multiple-empty-lines': [2, {
-      'max': 1
+    'no-multiple-empty-lines': [0, {//空行最多不能超过2行
+      'max': 2
     }],
     'no-native-reassign': 2,
     'no-negated-in-lhs': 2,
@@ -123,13 +123,13 @@ module.exports = {
     'no-return-assign': [2, 'except-parens'],
     'no-self-assign': 2,
     'no-self-compare': 2,
-    'no-sequences': 2,
+    'no-sequences': 0,// 禁止使用逗号运算符
     'no-shadow-restricted-names': 2,
     'no-spaced-func': 2,
     'no-sparse-arrays': 2,
     'no-this-before-super': 2,
     'no-throw-literal': 2,
-    'no-trailing-spaces': 2,
+    'no-trailing-spaces': 0,//规定行末不留空格。
     'no-undef': 2,
     'no-undef-init': 2,
     'no-unexpected-multiline': 2,
@@ -147,7 +147,7 @@ module.exports = {
     'no-useless-computed-key': 2,
     'no-useless-constructor': 2,
     'no-useless-escape': 0,
-    'no-whitespace-before-property': 2,
+    'no-whitespace-before-property': 0,//规定属性前面不能加空格。
     'no-with': 2,
     'one-var': [2, {
       'initialized': 'never'
@@ -163,7 +163,8 @@ module.exports = {
       'avoidEscape': true,
       'allowTemplateLiterals': true
     }],
-    'semi': [2, 'never'],
+    // 'semi': [2, 'never'],
+    'semi': [0],
     'semi-spacing': [2, {
       'before': false,
       'after': true
@@ -171,7 +172,7 @@ module.exports = {
     'space-before-blocks': [2, 'always'],
     'space-before-function-paren': [2, 'never'],
     'space-in-parens': [2, 'never'],
-    'space-infix-ops': 2,
+    'space-infix-ops': 0,// 中缀操作符周围要不要有空格
     'space-unary-ops': [2, {
       'words': true,
       'nonwords': false

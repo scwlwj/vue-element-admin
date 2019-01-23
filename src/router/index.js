@@ -112,6 +112,36 @@ export default new Router({
 
 export const asyncRouterMap = [
   {
+    path: '/shop',
+    component: Layout,
+    alwaysShow: true,
+    meta: {
+      title: '商超管理',
+      icon: 'shopping',
+      roles: ['admin']
+    },
+    children: [
+      {
+        path: 'goods/list',
+        component: () => import('@/views/wakav/shop/goods_list'),
+        name: 'ShopGoodsTable',
+        meta: {
+          title: 'goodsTable',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      },
+      {
+        path: 'goods/add',
+        component: () => import('@/views/wakav/shop/goods_add'),
+        name: 'ShopGoodsAdd',
+        meta: {
+          title: 'goodsAdd',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      }
+    ]
+  },
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/index',
